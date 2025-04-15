@@ -26,7 +26,7 @@ const Search = () => {
   const user = userData ? JSON.parse(userData) : null;
 
   const handleSearch = (page = 1) => {
-    fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(query)}&page=${page}`)
+    fetch(`https://friendly-spoon-2bsi.onrender.com/api/search?q=${encodeURIComponent(query)}&page=${page}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Error fetching search results');
@@ -46,7 +46,7 @@ const Search = () => {
 
   const loadWishlist = () => {
     if (user && user.id) {
-      fetch(`http://localhost:3000/api/wishlists/${user.id}?page=1`)
+      fetch(`https://friendly-spoon-2bsi.onrender.com/api/wishlists/${user.id}?page=1`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching wishlist');
