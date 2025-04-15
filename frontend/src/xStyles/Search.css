@@ -1,0 +1,36 @@
+.card-container {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+  }
+  
+  .card-container img {
+    width: 100%;
+    display: block;
+  }
+  
+  .plus-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-container:hover .plus-button {
+    opacity: 1;
+  }
+  

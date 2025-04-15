@@ -1,22 +1,25 @@
+require('dotenv').config();
 const express = require('express');
-const dotenv = require('dotenv');
 const cors = require('cors');
-
-dotenv.config();
-
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.json());
 app.use(cors());
 
-// Sample route
+app.use(express.json());
+
+const accountRoutes = require('./Routes/AccountRoutes');
+const wishlistRoutes = require('./Routes/WishlistRoutes');
+const searchRoutes = require('./Routes/SearchRoutes');
+
+app.use('/api/accounts', accountRoutes);
+app.use('/api/wishlists', wishlistRoutes);
+app.use('/api/search', searchRoutes);
+
 app.get('/', (req, res) => {
-  res.send('Magic Wishlist Backend');
+  res.json({ message: 'Welcome to the Magic Wishlist API' });
 });
 
-// Start server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

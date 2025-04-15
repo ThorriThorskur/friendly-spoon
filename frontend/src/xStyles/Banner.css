@@ -1,0 +1,63 @@
+.banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 0 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between items */
+  }
+  
+  .banner-link {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    color: #000;
+    margin-left: 5px;
+  }
+
+  .username-button {
+    background-color: #ddd;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .dropdown-container {
+    position: relative;
+  }
+  
+  .dropdown-box {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 120px;
+  }
+  
+  .dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-item {
+    margin: 5px 0;
+  }
+  
+  .dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    padding: 0;
+  }
+  
