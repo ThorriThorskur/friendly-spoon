@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
     const payload = { username, password };
 
-    fetch('http://localhost:3000/api/accounts/login', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/accounts/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -69,7 +69,7 @@ const Login = () => {
         </button>
       </form>
       <p style={{ marginTop: '1rem' }}>
-        Don't have an account? <Link to="/register">Register here</Link>
+        Don&apos;t have an account? <Link to="/register">Register here</Link>
       </p>
     </div>
   );

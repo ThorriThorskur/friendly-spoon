@@ -92,7 +92,7 @@ const Settings = () => {
 
   // --- Endpoint calls ---
   const handleUsernameSubmit = () => {
-    fetch('http://localhost:3000/api/accounts/change-username', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/accounts/change-username', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -119,7 +119,7 @@ const Settings = () => {
   };
 
   const handleEmailSubmit = () => {
-    fetch('http://localhost:3000/api/accounts/change-email', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/accounts/change-email', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -146,7 +146,7 @@ const Settings = () => {
   };
 
   const handlePasswordSubmit = () => {
-    fetch('http://localhost:3000/api/accounts/change-password', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/accounts/change-password', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -180,7 +180,7 @@ const Settings = () => {
     setDarkMode(checked);
 
     const darkmodeValue = checked ? 1 : 0;
-    fetch('http://localhost:3000/api/accounts/change-darkmode', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/accounts/change-darkmode', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -104,7 +104,7 @@ const Search = () => {
       prices: card.prices
     };
   
-    fetch('http://localhost:3000/api/wishlists', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/wishlists', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

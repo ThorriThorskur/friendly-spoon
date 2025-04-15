@@ -15,7 +15,7 @@ const Register = () => {
     // Create the payload that matches the backend expectations.
     const payload = { username, email, password };
 
-    fetch('http://localhost:3000/api/accounts/register', {
+    fetch('https://friendly-spoon-2bsi.onrender.com/api/accounts/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

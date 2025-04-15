@@ -7,7 +7,7 @@ const Wishlist = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const userId = 1;
   const fetchWishlist = (page = 1) => {
-    fetch(`http://localhost:3000/api/wishlists/${userId}?page=${page}`)
+    fetch(`https://friendly-spoon-2bsi.onrender.com/api/wishlists/${userId}?page=${page}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch wishlist');
@@ -39,7 +39,6 @@ const Wishlist = () => {
       ) : (
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {wishlistItems.map(item => {
-            // For demonstration, if item.image_uris is not available, use placeholder
             const cardImage = item.image_uris?.normal || 'https://via.placeholder.com/200x280?text=No+Image';
             return (
               <div key={item.id} style={{ margin: '10px' }}>
