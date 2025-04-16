@@ -8,13 +8,14 @@ const pool = new Pool({
 
 (async () => {
   try {
-    console.log("Wiping all data from the database tables...");
-    const queryText = "TRUNCATE TABLE wishlists, users, accounts RESTART IDENTITY CASCADE;";
-    await pool.query(queryText);
-
-    console.log("Database wiped successfully.");
+    console.log("Dropping the entire public schema (all tables, data, etc.) from the database...");
+    // Drop the schema and everything in it, then recreate it
+    await pool.query('DROP SCHEMA IF EXISTS public CASCADE;');
+    await pool.query('CREATE SCHEMA public;');
+    
+    console.log("All tables, data, and the public schema have been removed. The database is now empty.");
   } catch (error) {
-    console.error("Error wiping database:", error);
+    console.error("Error dropping schema:", error);
   } finally {
     await pool.end();
     console.log("Database connection closed.");
