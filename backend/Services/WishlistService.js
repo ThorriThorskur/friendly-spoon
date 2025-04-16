@@ -10,7 +10,7 @@ class WishlistService {
     const {
       userId,
       cardId,
-      orcacle_id,
+      oracle_id,
       name,
       image_uris,
       mana_cost,
@@ -33,7 +33,7 @@ class WishlistService {
 
     const queryText = `
       INSERT INTO wishlists (
-        user_id, card_id, name, image_uris, mana_cost, cmc, type_line, oracle_text,
+        user_id, card_id, oracle_id, name, image_uris, mana_cost, cmc, type_line, oracle_text,
         power, toughness, colors, color_identity, keywords, legalities, set_code,
         set_name, set_type, rarity, full_art, prices
       )
@@ -45,7 +45,7 @@ class WishlistService {
       RETURNING *;
     `;
     const params = [
-      userId, cardId, orcacle_id, name, image_uris, mana_cost, cmc, type_line, oracle_text,
+      userId, cardId, oracle_id, name, image_uris, mana_cost, cmc, type_line, oracle_text,
       power, toughness, colors, color_identity, keywords, legalities, set_code,
       set_name, set_type, rarity, full_art, prices
     ];
