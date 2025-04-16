@@ -52,3 +52,4 @@ Hér fyrir neðan er samantekt af helstu tækni sem verður notuð í verkefninu
 * Að finna tíma
 # Hvað var áhugavert
 * Hvað það tók langan tíma að safna saman og ákveða hvaða "tækni" skyldi nota
+# co pilot var notað
